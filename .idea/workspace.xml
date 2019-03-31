@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b37645c-16d6-4dd0-a95c-aeaaf471403c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson one/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson one/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/task3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/task3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/task4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/task4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/taskFifeAndSix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson two/taskFifeAndSix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,43 +17,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45006657">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lesson one/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lesson one/script.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,8 +35,21 @@
       <list>
         <option value="$PROJECT_DIR$/lesson one/index.html" />
         <option value="$PROJECT_DIR$/lesson one/script.js" />
+        <option value="$PROJECT_DIR$/lesson two/index.html" />
+        <option value="$PROJECT_DIR$/lesson two/js.js" />
+        <option value="$PROJECT_DIR$/lesson two/task3.html" />
+        <option value="$PROJECT_DIR$/lesson two/task4.html" />
+        <option value="$PROJECT_DIR$/lesson two/task4.js" />
+        <option value="$PROJECT_DIR$/lesson two/task5.js" />
+        <option value="$PROJECT_DIR$/lesson two/task5-6.html" />
+        <option value="$PROJECT_DIR$/lesson two/task5and6.js" />
+        <option value="$PROJECT_DIR$/lesson two/taskFifeAndSix.js" />
+        <option value="$PROJECT_DIR$/lesson two/taskFifeAndSix.html" />
       </list>
     </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
@@ -83,6 +71,11 @@
               <item name="js-basics" type="b2602c69:ProjectViewProjectNode" />
               <item name="js-basics" type="462c0819:PsiDirectoryNode" />
               <item name="lesson one" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-basics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson two" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -120,16 +113,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553802747974</updated>
-      <workItem from="1553802749489" duration="615000" />
+      <workItem from="1553802749489" duration="3413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="615000" />
+    <option name="totallyTimeSpent" value="3413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10524225" />
@@ -166,10 +158,62 @@
     <entry file="file://$PROJECT_DIR$/lesson one/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/task3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/task3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GB_JS_1st_level/homework2/task4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/taskFifeAndSix.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/taskFifeAndSix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/task4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson two/task4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
