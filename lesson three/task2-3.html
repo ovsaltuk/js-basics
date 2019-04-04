@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task two task three</title>
+</head>
+<body>
+
+</body>
+<script>
+    let basket = [
+        {price: 100},
+        {price: 200},
+        {price: 150},
+        {price: 250},
+        {price: 350}
+    ];
+
+    let countBasketPrice = function (basketArr){
+        let basketCount = 0;
+        for (let i = 0; i < basketArr.length; i++){
+            basketCount += +basketArr[i].price;
+        };
+        return basketCount;
+    }
+    console.log(countBasketPrice(basket));
+
+</script>
+</html>

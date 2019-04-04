@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task one</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+        4*. С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+        (можно без оптимизаций).
+         */
+
+    /**
+     * function show in console all simple number before max
+     * @param max {number}
+     */
+    function consoleSimpleNumber(max) {
+        /**
+         * check the number for simplicity
+         * @param number {number} number for check
+         * @returns {boolean} if simple - undefined else - true
+         */
+        function noSimpleTrue(number) {
+            for (let i = 2; i < number; i++){
+                if (number % i === 0){
+                    return true;
+                }
+            }
+        }
+        let j = 0;
+        while (j < max){
+            if (1 >= j){
+                j++;
+            }else if (noSimpleTrue(j) === true){
+                j++;
+            } else {
+                console.log(j);
+                j++;
+            }
+        }
+    }
+    consoleSimpleNumber(100);
+
+</script>
+
+</html>
