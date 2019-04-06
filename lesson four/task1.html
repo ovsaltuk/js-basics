@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task one</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     * функция выводит случайное число в диапазоне, не включая min max
+     * @param min минимальное число диапазона
+     * @param max максимальное число диапазона
+     * @returns {number} возвращает целое условно случаное число
+     */
+    function getRandomFloat(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    };
+    let number = getRandomFloat(0,1000);
+
+    /**
+     * Функция создает объект из введенного числа в диапазоне от 0 до 1000 не включительно
+     * @param number число которое необходимо разбить на сотни десятки и единицы
+     */
+    function parseNumToObj(number){
+        let numObj = {};
+        if(number <= 0 || number >= 1000){
+            console.log('Не корректное число');
+            return  numObj;
+        };
+
+        numObj.units = number%10;
+        numObj.tens = Math.floor(number/10)%10;
+        numObj.hundreds = Math.floor(number/100);
+
+        return numObj;
+    };
+    console.log(number);
+    console.log(parseNumToObj(number));
+
+
+</script>
+</html>
