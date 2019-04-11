@@ -1,0 +1,7 @@
+.cart{
+    margin: 50px auto;
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
