@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="cart">
+            <a href="#" class="btn-cart">Корзина</a>
+            <div class="cart-block">
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="products">
+
+        </div>
+    </main>
+</body>
+<script src="js/main.js"></script>
+<script>
+    window.onload = function(){
+        let buyButtons = document.querySelectorAll('.buy-btn');
+        buyButtons.forEach(function (button) {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for(let i = 0; i < catalog.products.length ;i++){
+                    if (+button.dataset.id === catalog.products[i].id){
+                        cart.products.push(catalog.products[i]);
+                        cart.cleanCart();
+                        cart.render();
+                    }
+                }
+            })
+        })
+    }
+</script>
+</html>
