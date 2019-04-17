@@ -25,6 +25,33 @@ var cart = {
         }
         this.render();
     },
+    getProduct(id){
+        return this.products.findIndex(function (el) {
+            return el.id === id
+        })
+    },
+
+    removeItem(arrIndex, container) {
+        if (this.products[arrIndex].quantity === 1) {
+            this.products.slice(arrIndex, 1)
+            container.remove();
+        } else {
+            this.products[arrIndex].quantity -= 1;
+        }
+
+        this.render();
+    },
+
+    setListeners(){
+        var that = this;
+        document.querySelector(this.container).addEventListener('click', function(e){
+            if(e.target.classList.contains('del-btn')){
+                var itemIndex = that.getProduct(+e.target.parentNode.dataset.id);
+                that.removeItem(itemIndex, e.target.parentNode)
+            }
+        })
+    },
+
     render(){
         var block = document.querySelector(this.container);
         block.innerHTML = '';
@@ -42,7 +69,7 @@ var cart = {
         block.insertAdjacentHTML('beforeend', `<p class="total">В корзине ${this.total.items} товаров на сумму ${this.total.sum} рублей</p>`)
     },
     getMarkup(product){
-        return `<div class="cart-item">
+        return `<div class="cart-item" data-id="${product.id}">
                     <h4>${product.title}</h4>
                     <p>${product.quantity} шт</p>
                     <p>${product.price * product.quantity} руб</p>
@@ -218,3 +245,4 @@ var catalog = {
 
 catalog.init();
 cart.render();
+cart.setListeners();
