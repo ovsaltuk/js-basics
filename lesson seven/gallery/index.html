@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main{
+            width: 400px;
+            height: 400px;
+        }
+        .tabs img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="gallery">
+    <div class="main">
+
+    </div>
+    <div class="tabs">
+
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        var gallery = {
+            block: '.gallery',
+            tabsBlock: '.tabs',
+            mainBlock: '.main',
+            bigImage: {src: 'img/big/img1.jpeg', alt: 'Some img'},
+            allImages: [
+                {src: 'img/small/img1.jpeg', alt: 'Some img'},
+                {src: 'img/small/img2.png', alt: 'Some img'},
+                {src: 'img/small/img3.jpg', alt: 'Some img'},
+                {src: 'img/small/img4.gif', alt: 'Some img'},
+            ],
+            renderTabs(){
+                var block = document.querySelector(this.tabsBlock);
+                for (var img of this.allImages){
+                    block.insertAdjacentHTML('beforeend', this.createImg(img));
+                }
+            },
+            renderMain(){
+              document.querySelector(this.mainBlock).innerHTML = this.createImg(this.bigImage)
+            },
+            init(){
+              this.renderTabs();
+              this.renderMain();
+              this.controller();
+            },
+            controller(){
+                var that = this;
+                document.querySelector(this.tabsBlock).addEventListener('click', function(e){
+                    if(e.target.tagName === 'IMG'){
+                        that.bigImage.src = e.target.src.replace('small', 'big');
+                        that.renderMain();
+                    }
+                })
+            },
+            createImg(img){
+                return `<img src="${img.src}" alt="${img.alt}">`
+            }
+        };
+        gallery.init()
+
+    }
+</script>
+</body>
+</html>

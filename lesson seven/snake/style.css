@@ -1,0 +1,15 @@
+.cell {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #aaa;
+    background-color: #555;
+}
+.row {
+    display: flex;
+}
+.snake-unit{
+    background-color: #fff;
+}
+.food-unit{
+    background-color: red;
+}
