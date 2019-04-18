@@ -31,23 +31,49 @@ var cart = {
         })
     },
 
-    removeItem(arrIndex, container) {
+    removeItem(arrIndex) {
+        var container = document.getElementById(`${this.products[arrIndex].id}`)
         if (this.products[arrIndex].quantity === 1) {
-            this.products.slice(arrIndex, 1)
+            this.products.splice(arrIndex, 1)
             container.remove();
         } else {
             this.products[arrIndex].quantity -= 1;
-        }
 
+        }
         this.render();
     },
+
+    /*removeItem(arrIndex) {
+        вариант с объявлением переменной внутри if почему то не работал, первый элемент корзины нормально
+        удалялся на втором, вычитал стоимость но
+        сам элемент не удалял, выскакивала ошибка:
+
+        main.js:35 Uncaught TypeError: Cannot read property 'id' of undefined
+        at Object.removeItem (main.js:35)
+        at HTMLDivElement.<anonymous> (main.js:71).
+
+        после того как решил все вернуть и посмотреть у второго элемента перестал убавлять количество, но стал сразу
+        удалять
+
+        if (this.products[arrIndex].quantity === 1) {
+            var container = document.getElementById(`${this.products[arrIndex].id}`)
+            this.products.splice(arrIndex, 1)
+            container.remove();
+        } else {
+            this.products[arrIndex].quantity -= 1;
+
+        }
+        this.render();
+
+
+    },*/
 
     setListeners(){
         var that = this;
         document.querySelector(this.container).addEventListener('click', function(e){
             if(e.target.classList.contains('del-btn')){
-                var itemIndex = that.getProduct(+e.target.parentNode.dataset.id);
-                that.removeItem(itemIndex, e.target.parentNode)
+                var itemIndex = that.getProduct(+e.target.dataset.id);
+                that.removeItem(itemIndex)
             }
         })
     },
@@ -63,19 +89,21 @@ var cart = {
             block.insertAdjacentHTML('beforeend', this.getMarkup(product));
         }
         this.renderTotal(block);
+        this.setListeners();
     },
     renderTotal(block){
         this.calcTotal();
         block.insertAdjacentHTML('beforeend', `<p class="total">В корзине ${this.total.items} товаров на сумму ${this.total.sum} рублей</p>`)
     },
     getMarkup(product){
-        return `<div class="cart-item" data-id="${product.id}">
+        return `<div class="cart-item" id="${product.id}">
                     <h4>${product.title}</h4>
                     <p>${product.quantity} шт</p>
                     <p>${product.price * product.quantity} руб</p>
-                    <button class="del-btn">&times;</button>
+                    <button class="del-btn" data-id="${product.id}">&times;</button>
                 </div>`
     }
+
 };
 
 var gallery = {
@@ -137,6 +165,15 @@ var gallery = {
         document.querySelector(this.nav).addEventListener('click', function(e){
             if(e.target.tagName === 'BUTTON'){
                 that.showImage(e.target.dataset.action);
+            }
+        });
+        document.addEventListener('keydown', function (e) {
+            if(e.keyCode === 39){
+                that.showImage('next');
+            } else if(e.keyCode === 37){
+                that.showImage('prev');
+            }else if (e.keyCode === 27){
+                document.querySelector(that.block).classList.remove('show')
             }
         })
 
@@ -233,7 +270,7 @@ var catalog = {
                     <img src="${product.images.main.src}" alt="" data-id="${product.id}">
                     <div class="desc">
                         <h3>${product.title}</h3>
-                        <p>${product.price} руб</p>
+                        <p class="price">${product.price} руб</p>
                         <button class="buy-btn" data-id="${product.id}">Купить</button>
                     </div>
                 </div>`
@@ -245,4 +282,3 @@ var catalog = {
 
 catalog.init();
 cart.render();
-cart.setListeners();
