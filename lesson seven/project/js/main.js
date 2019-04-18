@@ -55,6 +55,8 @@ var cart = {
         после того как решил все вернуть и посмотреть у второго элемента перестал убавлять количество, но стал сразу
         удалять
 
+        насколько я понимаю проблема в работе с самим массивом объекта корзины, но в чем конкретно понять не могу
+
         if (this.products[arrIndex].quantity === 1) {
             var container = document.getElementById(`${this.products[arrIndex].id}`)
             this.products.splice(arrIndex, 1)
